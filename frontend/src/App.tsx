@@ -6,6 +6,10 @@ import Products from "./Products/Products";
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetail';
 import PaymentScreen from './Payment/Payment';
+<<<<<<< HEAD
+=======
+import CheckoutSteps from './Payment/CheckoutSteps';
+>>>>>>> d5c75cdf77da488bf031d7ee1719e1f43186e537
 
 function App() {
   const openMenu = () => {
