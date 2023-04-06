@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using red-rattlesnake.Domain.Catalog;
+using red-rattlesnake.Data;
 
 namespace red-rattlesnake.Api.Controllers
 {
@@ -7,11 +8,19 @@ namespace red-rattlesnake.Api.Controllers
     [Rout("[controller")]
     public class CatalogController : ControllerBase
     {
+        private readonly StoreContext _db;
 
+        public CatalogController(StoreContext db)
+        {
+            _db = db;
+        }
     }
 
     [HttpGet]
     public IActionResult GetItems()
+    {
+        return Ok(_db.Items);
+    }
     {
         var items = new List<Item>()
         {

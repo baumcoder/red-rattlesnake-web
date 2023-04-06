@@ -2,6 +2,7 @@ namespace red-rattlesnake.Domain.Catalog;
 
 public class Rating
 {
+    public int id {get; set;}
     public int Star {get; set; }
     public string UserName { get; set; }
     public int Review { get; set; }
